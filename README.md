@@ -1,7 +1,7 @@
 docker-mcollectived
 ===================
 
-docker-mcollectived
+Fuel docker-mcollectived container
 
 
 ```bash
