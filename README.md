@@ -8,7 +8,7 @@ docker-mcollectived
 cp /etc/astute.yaml ./
 
 # build
-docker build -t fuel/mcollectived docker-mcollectived
+docker build -t fuel/mcollectived ./
 
 # run AFTER storage-puppet and docker-rabbitmq
 docker run \
