@@ -16,4 +16,6 @@ RUN chmod +x /usr/local/bin/start.sh
 # let's disable some services and commands since we don't need them in our container
 RUN echo -e '#!/bin/bash\nexit 0' > /etc/init.d/mcollective
 
+RUN touch /etc/puppet/hiera.yaml
+
 CMD ["/usr/local/bin/start.sh"]
