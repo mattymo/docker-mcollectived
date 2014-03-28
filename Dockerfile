@@ -12,7 +12,8 @@ ADD start.sh /usr/local/bin/start.sh
 ADD astute.yaml /etc/astute.yaml
 ADD site.pp /root/site.pp
 RUN chmod +x /usr/local/bin/start.sh
-# chmod to 0 to disable mcollective start from puppet manifests
-RUN chmod 0 /etc/init.d/mcollective
+
+# let's disable some services and commands since we don't need them in our container
+RUN echo -e '#!/bin/bash\nexit 0' > /etc/init.d/mcollective
 
 CMD ["/usr/local/bin/start.sh"]
