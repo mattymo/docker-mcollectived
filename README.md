@@ -10,7 +10,7 @@ cp /etc/astute.yaml ./
 # build
 docker build -t fuel/mcollectived ./
 
-# run AFTER storage-puppet and docker-rabbitmq
+# run AFTER storage-puppet, storage-log and docker-rabbitmq
 docker run \
   -h $(hostname -f) \
   --volumes-from storage-puppet \
