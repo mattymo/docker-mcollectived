@@ -14,6 +14,7 @@ docker build -t fuel/mcollectived ./
 docker run \
   -h $(hostname -f) \
   --volumes-from storage-puppet \
+  --volumes-from storage-log \
   -d -t \
   fuel/mcollectived
 ```
