@@ -12,6 +12,7 @@ RUN yum --quiet install -y puppet mcollective
 ADD modules /etc/puppet/modules
 ADD start.sh /usr/local/bin/start.sh
 ADD site.pp /root/site.pp
+ADD astute.yaml /etc/astute.yaml
 
 RUN chmod +x /usr/local/bin/start.sh
 
