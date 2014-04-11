@@ -9,6 +9,7 @@ RUN echo -e "[nailgun]\nname=Nailgun Local Repo\nbaseurl=http://10.20.0.2:8080/c
 RUN yum clean all
 RUN yum --quiet install -y puppet mcollective
 
+ADD modules /etc/puppet/modules
 ADD start.sh /usr/local/bin/start.sh
 ADD site.pp /root/site.pp
 
