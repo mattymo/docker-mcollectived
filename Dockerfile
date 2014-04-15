@@ -17,7 +17,7 @@ ADD astute.yaml /etc/astute.yaml
 RUN chmod +x /usr/local/bin/start.sh
 
 RUN touch /etc/puppet/hiera.yaml /var/lib/hiera/common.yaml
-RUN /usr/bin/puppet apply -d -v /root/site.pp
+RUN /usr/bin/puppet apply -d -v /etc/puppet/modules/mcollective/examples/mcollective-server-only.pp
 
 # let's disable some services and commands since we don't need them in our container
 RUN echo -e '#!/bin/bash\n#chkconfig: 345 20 80\nexit 0' > /etc/init.d/mcollective
