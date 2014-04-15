@@ -19,5 +19,6 @@ RUN echo -e '#!/bin/bash\n#chkconfig: 345 20 80\nexit 0' > /etc/init.d/mcollecti
 
 ADD start.sh /usr/local/bin/start.sh
 RUN chmod +x /usr/local/bin/start.sh
+RUN mkdir -p /var/www/nailgun/dump
 
 CMD ["/usr/local/bin/start.sh"]
